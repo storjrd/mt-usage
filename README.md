@@ -1,20 +1,20 @@
 # mt-usage
 
-* Install or include the Amazon S3 SDK.
+## 1. Install or include the Amazon S3 SDK.
 
-e.g. install with npm
+e.g. with npm
 
 ```
 npm install --save aws-sdk
 ```
 
-* Import the S3 client
+## 2. Import the S3 client
 
 ``` javascript
 import S3 from "aws-sdk/clients/s3";
 ```
 
-* Create client object with MT credentials
+## 3. Create client object with MT credentials
 
 ``` javascript
 const accessKeyId = "access key here";
@@ -30,7 +30,7 @@ const s3 = new S3({
 });
 ```
 
-* List objects and log to console
+## 4. List objects and log to console
 
 ``` javascript
 (async () => {
