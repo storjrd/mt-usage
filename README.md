@@ -42,5 +42,34 @@ const s3 = new S3({
   console.log(buckets);
 
 })();
-
 ```
+
+## 4. List objects and log to console
+
+``` javascript
+(async () => {
+
+  const { Buckets } = await s3.listBuckets({}).promise();
+  
+  console.log(buckets);
+
+})();
+```
+## 5. Upload an object
+
+``` javascript
+(async () => {
+
+  // `file` can be a readable stream in node or a `Blob` in the browser
+
+  const params = {
+    Bucket: "my-bucket",
+    Key: "my-object",
+    Body: file
+  };
+
+  const upload = await s3.upload(params, {
+    partSize: 64 * 1024 * 1024
+  }).promise();
+  
+})();
