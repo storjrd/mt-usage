@@ -31,7 +31,7 @@ const s3 = new S3({
 
 * List objects and log to console
 
-```
+``` javascript
 (async () => {
 
   const { Buckets } = await s3.listBuckets({}).promise();
