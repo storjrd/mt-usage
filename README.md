@@ -44,17 +44,6 @@ const s3 = new S3({
 })();
 ```
 
-## 4. List objects and log to console
-
-``` javascript
-(async () => {
-
-  const { Buckets } = await s3.listBuckets({}).promise();
-  
-  console.log(buckets);
-
-})();
-```
 ## 5. Upload an object
 
 ``` javascript
