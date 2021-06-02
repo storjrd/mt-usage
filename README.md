@@ -26,7 +26,9 @@ const s3 = new S3({
   secretAccessKey,
   endpoint,
   s3ForcePathStyle: true,
-  signatureVersion: "v4"
+  signatureVersion: "v4",
+  connectTimeout: 0,
+  httpOptions: { timeout: 0 }
 });
 ```
 
