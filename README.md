@@ -39,7 +39,7 @@ const s3 = new S3({
 
   const { Buckets } = await s3.listBuckets({}).promise();
   
-  console.log(buckets);
+  console.log(Buckets);
 
 })();
 ```
