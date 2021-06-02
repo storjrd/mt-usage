@@ -19,11 +19,12 @@ import S3 from "aws-sdk/clients/s3";
 ``` javascript
 const accessKeyId = "access key here";
 const secretAccessKey = "secret access key here";
+const endpoint = "https://gateway.tardigradeshare.io";
 
 const s3 = new S3({
   accessKeyId,
   secretAccessKey,
-  endpoint: "https://gateway.tardigradeshare.io",
+  endpoint,
   s3ForcePathStyle: true,
   signatureVersion: "v4"
 });
