@@ -73,3 +73,18 @@ const s3 = new S3({
   }).promise();
   
 })();
+
+## 6. Get URL that points to an object
+
+The `getSignedUrl` function creates a cryptographically signed url. No contact with the gateway is needed here; this happens instantaneously. 
+
+``` javascript
+const params = {
+  Bucket: "my-bucket",
+  Key: "my-object"
+}
+
+const url = s3.getSignedUrl("getObject", params);
+
+// e.g. create an <img> where src points to url
+```
