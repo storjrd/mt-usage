@@ -73,6 +73,7 @@ const s3 = new S3({
   }).promise();
   
 })();
+```
 
 ## 6. Get URL that points to an object
 
